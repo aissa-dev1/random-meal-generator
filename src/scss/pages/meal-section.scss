@@ -1,0 +1,41 @@
+@import "../mixins/grid/grid-cols.scss";
+@import "../mixins/flex/flex-col.scss";
+@import "../variables/borders.scss";
+
+.main-header .meal-section {
+  @include grid-cols(2, start);
+  gap: 1rem;
+  margin-top: 1rem;
+
+  .front-container {
+    @include flex-col;
+    gap: 1rem;
+
+    img {
+      width: 100%;
+      border-radius: $rounded;
+    }
+
+    p {
+      font-weight: 500;
+    }
+
+    span {
+      font-weight: bold;
+    }
+  }
+
+  .back-container {
+    @include flex-col;
+    gap: 1rem;
+
+    h3 {
+      font-size: 1.8rem;
+    }
+
+    p {
+      font-size: 1.25rem;
+      font-weight: 500;
+    }
+  }
+}

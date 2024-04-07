@@ -1,0 +1,47 @@
+@import "../mixins/flex/flex.scss";
+@import "../variables/colors.scss";
+@import "../variables/borders.scss";
+@import "../mixins/elements/button.scss";
+@import "../variables/transitions.scss";
+
+.main-header .meal-options-section {
+  @include flex(column, center, center);
+  gap: 0.5rem;
+
+  h3 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  button {
+    @include button;
+    width: 8.75rem;
+    height: 2.25rem;
+    border-radius: $rounded;
+    background-color: $main_color;
+    color: $white_color;
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 500;
+    transition-duration: $smooth;
+
+    &:hover {
+      opacity: 0.75;
+    }
+
+    &:active {
+      transform: scale(0.9);
+    }
+  }
+
+  &.center {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+}

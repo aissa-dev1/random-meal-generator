@@ -1,0 +1,6 @@
+@import "../reset/reset-element.scss";
+
+@mixin button {
+  @include reset-element;
+  cursor: pointer;
+}

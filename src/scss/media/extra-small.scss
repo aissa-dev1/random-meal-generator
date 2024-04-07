@@ -1,0 +1,12 @@
+@import "../variables/sizes.scss";
+@import "../mixins/grid/grid-cols.scss";
+
+@media only screen and (max-width: $extra_small) {
+  .container {
+    width: $full;
+
+    .main-header .meal-section {
+      @include grid-cols(1, center);
+    }
+  }
+}
